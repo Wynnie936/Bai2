@@ -1,0 +1,13 @@
+@model Bai2.ViewModels.FestivalManagementViewModel
+
+@{
+    ViewData["Title"] = "Quản lý lễ hội";
+}
+
+<h2>Quản lý lễ hội</h2>
+
+<partial name="_OrganizerInfo" model="Model.Organizer" />
+
+@await Component.InvokeAsync(
+    "FestivalList",
+    new { festivals = Model.Festivals })

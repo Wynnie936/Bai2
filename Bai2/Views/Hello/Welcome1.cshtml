@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<h2>Welcome</h2>
+<h1>ABCXYZ</h1>
+<p>Ngoc yen is right here Bae :3 </p>
+
+<partial name="_WelcomeNote" model='"Đây là nội dung được hiển thị bằng Partial View."' />
+
+@await Component.InvokeAsync("WelcomeMessage", new
+{
+    message = $"Xin chào {ViewData["Name"] ?? "bạn"}!",
+    repeatCount = 3
+})

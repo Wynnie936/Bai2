@@ -1,0 +1,13 @@
+@model Bai2.ViewComponents.WelcomeMessageViewModel
+
+<div class="alert alert-primary">
+    <strong>View Component:</strong>
+    @Model.Message
+</div>
+
+<ul>
+@for (var i = 0; i < Model.RepeatCount; i++)
+{
+    <li>@Model.Message (lần @(i + 1))</li>
+}
+</ul>
